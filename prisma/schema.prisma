@@ -1,0 +1,26 @@
+datasource db {
+  provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id         Int     @id @default(autoincrement())
+  telegramId BigInt  @unique
+  publicKey  String
+  privateKey String
+  token_mint String
+  token_symbol String
+  
+}
+
+model Transaction {
+  id     Int    @id @default(autoincrement())
+  from   String
+  to     String
+  amount Float
+  status String
+}

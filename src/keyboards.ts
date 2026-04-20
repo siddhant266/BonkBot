@@ -15,3 +15,25 @@ export const mainKeyboard = Markup.inlineKeyboard([
         Markup.button.callback("🪙 Send Token", "send_token_menu"),
     ],
 ]);
+
+export const sendSolCancelKeyboard = Markup.inlineKeyboard([
+    [Markup.button.callback("❌ Cancel", "send_sol_cancel")],
+]);
+
+export const sendSolConfirmKeyboard = Markup.inlineKeyboard([
+    [
+        Markup.button.callback("✅ Confirm Send", "send_sol_confirm"),
+        Markup.button.callback("❌ Cancel", "send_sol_cancel"),
+    ],
+]);
+
+export const sendTokenCancelKeyboard = Markup.inlineKeyboard([
+    [Markup.button.callback("❌ Cancel", "send_token_cancel")],
+]);
+
+export const sendTokenConfirmKeyboard = Markup.inlineKeyboard([
+    [
+        Markup.button.callback("✅ Confirm Send", "send_token_confirm"),
+        Markup.button.callback("❌ Cancel", "send_token_cancel"),
+    ],
+]);
